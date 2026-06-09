@@ -129,6 +129,11 @@ img {
   color: var(--ink);
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .nav-cta,
 .button {
   display: inline-flex;
@@ -486,6 +491,182 @@ h3 {
   color: #315f7b;
 }
 
+.page-hero {
+  padding: clamp(74px, 11vw, 138px) 0 clamp(54px, 8vw, 92px);
+  background:
+    linear-gradient(90deg, rgba(255, 253, 247, 0.98), rgba(255, 253, 247, 0.9)),
+    url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+}
+
+.page-hero-inner {
+  max-width: 890px;
+}
+
+.intro-grid,
+.story-page,
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(300px, 0.7fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.intro-copy,
+.story-main,
+.contact-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.intro-copy p,
+.story-main p,
+.contact-copy p,
+.detail-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.page-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.page-card {
+  display: flex;
+  min-height: 310px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.page-card span,
+.service-detail > span {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-card p,
+.service-detail p {
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.page-card a {
+  width: fit-content;
+  margin-top: 24px;
+  color: var(--deep-blue);
+  font-weight: 800;
+}
+
+.story-aside {
+  display: grid;
+  gap: 24px;
+}
+
+.story-aside img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.service-detail-list {
+  display: grid;
+  gap: 18px;
+}
+
+.service-detail {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 48px);
+  padding: clamp(28px, 5vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.service-detail .button {
+  width: fit-content;
+  margin-top: 24px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.detail-grid article {
+  padding: 28px;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.detail-grid h3 {
+  margin-bottom: 12px;
+}
+
+.next-step {
+  display: grid;
+  max-width: 820px;
+  gap: 18px;
+  text-align: center;
+}
+
+.next-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.next-step .button {
+  justify-self: center;
+  margin-top: 8px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  padding: clamp(26px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(37, 49, 61, 0.18);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form input {
+  min-height: 46px;
+  padding: 0 12px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  padding: 12px;
+}
+
 .template-c .story {
   grid-template-columns: minmax(0, 1fr);
 }
@@ -585,6 +766,12 @@ h3 {
   .story,
   .practice,
   .template-c .story-copy,
+  .intro-grid,
+  .story-page,
+  .contact-layout,
+  .service-detail,
+  .page-card-grid,
+  .detail-grid,
   .template-grid {
     grid-template-columns: 1fr;
   }
