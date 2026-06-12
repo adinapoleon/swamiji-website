@@ -4,29 +4,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guidance | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260612">
   </head>
   <body class="template-c">
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html"><span class="brand-mark">Om</span><span>Self-Knowledge</span></a>
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+            <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+            <span class="brand-text">
+              <span class="brand-name">Self-Knowledge</span>
+              <span class="brand-subtitle">Spiritual Coaching</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <nav class="nav-links" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="about.html">Story</a>
             <a aria-current="page" href="services.html">Guidance</a>
             <a href="approach.html">Path</a>
-            <a class="nav-cta" href="contact.html">Discovery Conversation</a>
+            <a class="nav-cta" href="contact.html">Request Coaching</a>
           </nav>
         </div>
+        <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
+        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+          <div class="drawer-header">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+              <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+              <span class="brand-text">
+                <span class="brand-name">Self-Knowledge</span>
+                <span class="brand-subtitle">Spiritual Coaching</span>
+              </span>
+            </a>
+            <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
+          </div>
+          <nav class="drawer-links" aria-label="Mobile primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a aria-current="page" href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a href="contact.html">Request Coaching</a>
+          </nav>
+        </aside>
       </header>
 
       <main>
         <section class="page-hero">
           <div class="container page-hero-inner">
             <p class="eyebrow">Guidance</p>
-            <h1>Three forms of support, one essential direction.</h1>
-            <p class="lead">The work is private when it needs intimacy, structured when it needs momentum, and communal when it needs shared devotion.</p>
+            <h1>Spiritual Coaching / Mentoring</h1>
+            <p class="lead">Personal guidance for sincere inquiry, inner clarity, self-realization, and a steadier spiritual life.</p>
           </div>
         </section>
 
@@ -35,26 +66,26 @@
             <article class="service-detail">
               <span>Mentoring</span>
               <div>
-                <h2>Spiritual Mentoring</h2>
+                <h2>Spiritual Coaching / Mentoring</h2>
                 <p>One-on-one conversations for sincere inquiry, meditation support, and life integration. This is a quiet space to bring questions around identity, grief, purpose, relationships, spiritual confusion, or the longing for freedom.</p>
-                <a class="button secondary" href="contact.html">Request a conversation</a>
+                <a class="button secondary" href="contact.html">Request a Coaching Session</a>
               </div>
             </article>
 
             <article class="service-detail">
               <span>Program</span>
               <div>
-                <h2>Spiritual Growth Program</h2>
-                <p>A three-month journey for seekers who want a steady container for study and practice. The program can include regular meetings, meditation rhythm, self-inquiry, and selected Vedanta teachings.</p>
-                <a class="button secondary" href="contact.html">Discuss the journey</a>
+                <h2>Spiritual Coaching Program</h2>
+                <p>A steady journey for seekers who want regular coaching sessions, meditation rhythm, self-inquiry, personal guidance, and selected teachings from Vedanta textbooks.</p>
+                <a class="button secondary" href="contact.html">Begin Spiritual Coaching</a>
               </div>
             </article>
 
             <article class="service-detail">
               <span>Satsang</span>
               <div>
-                <h2>Group Satsang</h2>
-                <p>Community study and contemplation rooted in Advaita Vedanta and sincere listening. Satsang offers a shared field for questions, reflection, and spiritual friendship.</p>
+                <h2>Satsang</h2>
+                <p>Study and contemplation rooted in Advaita Vedanta and sincere listening. Satsang offers a respectful space for questions, reflection, and spiritual growth.</p>
                 <a class="button secondary" href="contact.html">Attend satsang</a>
               </div>
             </article>
@@ -65,8 +96,8 @@
           <div class="container">
             <div class="cta-band">
               <h2>Not sure which offering fits?</h2>
-              <p>A complimentary discovery conversation is the best place to begin.</p>
-              <a class="button" href="contact.html">Schedule a Complimentary Discovery Conversation</a>
+              <p>Share what you are seeking, and Swamiji can review whether this guidance is a good fit.</p>
+              <a class="button" href="contact.html">Request Spiritual Coaching</a>
             </div>
           </div>
         </section>
@@ -79,5 +110,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js?v=20260611"></script>
   </body>
 </html>

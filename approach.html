@@ -4,21 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Path | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260612">
   </head>
   <body class="template-c">
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html"><span class="brand-mark">Om</span><span>Self-Knowledge</span></a>
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+            <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+            <span class="brand-text">
+              <span class="brand-name">Self-Knowledge</span>
+              <span class="brand-subtitle">Spiritual Coaching</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <nav class="nav-links" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a href="about.html">Story</a>
             <a href="services.html">Guidance</a>
             <a aria-current="page" href="approach.html">Path</a>
-            <a class="nav-cta" href="contact.html">Discovery Conversation</a>
+            <a class="nav-cta" href="contact.html">Request Coaching</a>
           </nav>
         </div>
+        <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
+        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+          <div class="drawer-header">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+              <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+              <span class="brand-text">
+                <span class="brand-name">Self-Knowledge</span>
+                <span class="brand-subtitle">Spiritual Coaching</span>
+              </span>
+            </a>
+            <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
+          </div>
+          <nav class="drawer-links" aria-label="Mobile primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a aria-current="page" href="approach.html">Path</a>
+            <a href="contact.html">Request Coaching</a>
+          </nav>
+        </aside>
       </header>
 
       <main>
@@ -26,7 +57,7 @@
           <div class="container page-hero-inner">
             <p class="eyebrow">The path</p>
             <h1>Spiritual life becomes real when it touches daily life.</h1>
-            <p class="lead">The approach is rooted in Advaita Vedanta and made practical through inquiry, meditation, and integration.</p>
+            <p class="lead">The approach is inspired by Advaita Vedanta and made practical through listening, inquiry, meditation, and integration.</p>
           </div>
         </section>
 
@@ -36,15 +67,16 @@
               <p class="eyebrow">Approach</p>
               <h2>A gentle structure for a very direct path.</h2>
               <ul class="practice-list">
-                <li><span class="number">I</span><span><strong>Inquiry.</strong> Examine the beliefs that keep the mind searching outside itself.</span></li>
-                <li><span class="number">II</span><span><strong>Meditation.</strong> Cultivate stillness without turning it into another performance.</span></li>
-                <li><span class="number">III</span><span><strong>Integration.</strong> Bring insight into the ordinary places where freedom is tested.</span></li>
+                <li><span class="number">I</span><span><strong>Listening.</strong> Inhale the fragrance of the words left by the gurus of Vedanta.</span></li>
+                <li><span class="number">II</span><span><strong>Inquiry.</strong> Examine the beliefs that keep the mind searching outside itself.</span></li>
+                <li><span class="number">III</span><span><strong>Meditation.</strong> Cultivate stillness without turning it into another performance.</span></li>
+                <li><span class="number">IV</span><span><strong>Integration.</strong> Bring insight into the ordinary places where freedom is tested.</span></li>
               </ul>
             </div>
             <aside class="practice-panel">
               <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=900&q=80" alt="Sunlight entering a quiet temple corridor">
               <h3>The tone is spacious, direct, and respectful.</h3>
-              <p>No pressure, no spiritual performance, and no promise of instant transformation. Just careful guidance for a sincere path.</p>
+              <p>No pressure, no spiritual performance, and no promise of instant transformation. Just careful coaching and mentoring for a sincere path.</p>
             </aside>
           </div>
         </section>
@@ -57,7 +89,7 @@
             </article>
             <article>
               <h3>Inquire honestly</h3>
-              <p>Use Advaita Vedanta to examine the assumptions that create confusion and suffering.</p>
+              <p>Use Vedanta-inspired wisdom to examine the assumptions that create confusion and suffering.</p>
             </article>
             <article>
               <h3>Practice steadily</h3>
@@ -74,5 +106,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js?v=20260611"></script>
   </body>
 </html>

@@ -4,29 +4,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Story | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260612">
   </head>
   <body class="template-c">
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html"><span class="brand-mark">Om</span><span>Self-Knowledge</span></a>
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+            <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+            <span class="brand-text">
+              <span class="brand-name">Self-Knowledge</span>
+              <span class="brand-subtitle">Spiritual Coaching</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <nav class="nav-links" aria-label="Primary navigation">
             <a href="index.html">Home</a>
             <a aria-current="page" href="about.html">Story</a>
             <a href="services.html">Guidance</a>
             <a href="approach.html">Path</a>
-            <a class="nav-cta" href="contact.html">Discovery Conversation</a>
+            <a class="nav-cta" href="contact.html">Request Coaching</a>
           </nav>
         </div>
+        <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
+        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+          <div class="drawer-header">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
+              <img class="brand-emblem" src="images/emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
+              <span class="brand-text">
+                <span class="brand-name">Self-Knowledge</span>
+                <span class="brand-subtitle">Spiritual Coaching</span>
+              </span>
+            </a>
+            <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
+          </div>
+          <nav class="drawer-links" aria-label="Mobile primary navigation">
+            <a href="index.html">Home</a>
+            <a aria-current="page" href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a href="contact.html">Request Coaching</a>
+          </nav>
+        </aside>
       </header>
 
       <main>
         <section class="page-hero">
           <div class="container page-hero-inner">
             <p class="eyebrow">The story</p>
-            <h1>From renunciation to relationship with the world.</h1>
-            <p class="lead">Not a resume, but the living story behind the guidance: what led to monastic life, what practice revealed, and why this work is now offered to others.</p>
+            <h1>From practice to personal guidance.</h1>
+            <p class="lead">Not a resume, but the living story behind the guidance: what led to monastic life, what practice revealed, and why this work is now offered to sincere seekers.</p>
           </div>
         </section>
 
@@ -37,10 +68,14 @@
               <p>In the early years, practice brought structure. It asked for humility, patience, and the willingness to see how much of suffering comes from mistaken identity. Over time, silence became less of an escape and more of a doorway into steadiness.</p>
               <p>Through 27 years of Advaita Vedanta practice, the teaching became increasingly direct: the peace we seek is not an achievement. It is obscured by misunderstanding and revealed through inquiry.</p>
               <p>Now the intention is to help sincere seekers meet their own questions with honesty, tenderness, and precision. Spiritual life does not need to become another performance. It can become a clear way of living.</p>
+              <div class="bio-placeholder">
+                <h2>Bio</h2>
+                <p>Bio coming soon. Swamiji will provide this section soon.</p>
+              </div>
             </div>
             <aside class="story-aside">
               <blockquote class="quote">The work is not to improve the self endlessly. The work is to know what the self truly is.</blockquote>
-              <img src="https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=900&q=80" alt="Sunlight entering a quiet temple corridor">
+              <img src="images/IMG_3511.jpg" alt="Swamiji seated in meditation by a mountain lake">
             </aside>
           </div>
         </section>
@@ -48,8 +83,8 @@
         <section class="section band">
           <div class="container next-step">
             <h2>Guidance begins with listening.</h2>
-            <p>If your own questions feel ready for sincere attention, begin with a complimentary conversation.</p>
-            <a class="button" href="contact.html">Schedule a Complimentary Discovery Conversation</a>
+            <p>If your own questions feel ready for sincere attention, request spiritual coaching and share what you are seeking.</p>
+            <a class="button" href="contact.html">Request Spiritual Coaching</a>
           </div>
         </section>
       </main>
@@ -61,5 +96,6 @@
         </div>
       </footer>
     </div>
+    <script src="script.js?v=20260611"></script>
   </body>
 </html>
