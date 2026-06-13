@@ -440,6 +440,10 @@ h3 {
   padding: clamp(66px, 8.5vw, 108px) 0;
 }
 
+main > .section:last-child {
+  padding-bottom: clamp(32px, 5vw, 56px);
+}
+
 .section.band {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0)),
@@ -630,7 +634,7 @@ h3 {
 }
 
 .footer {
-  padding: 34px 0;
+  padding: 0 0 30px;
   color: var(--muted);
   font-size: 0.95rem;
 }
@@ -684,12 +688,60 @@ h3 {
   color: #315f7b;
 }
 
+.home-hero .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+
+.home-hero .hero-copy,
+.home-hero h1,
+.home-hero .lead,
+.home-hero .hero-note {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-hero .hero-copy {
+  width: min(100%, 860px);
+}
+
+.home-hero .hero-actions {
+  justify-content: center;
+}
+
 .page-hero {
+  --page-hero-image: url("images/site-hero-home-still-water.png");
+  --page-hero-position: center;
   padding: clamp(74px, 11vw, 138px) 0 clamp(54px, 8vw, 92px);
   background:
-    linear-gradient(90deg, rgba(255, 253, 247, 0.99), rgba(255, 253, 247, 0.88)),
-    url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=1600&q=80") center / cover no-repeat;
+    linear-gradient(90deg, rgba(255, 253, 247, 0.99) 0%, rgba(255, 253, 247, 0.9) 55%, rgba(255, 253, 247, 0.28) 100%),
+    var(--page-hero-image) var(--page-hero-position) / cover no-repeat;
   border-bottom: 1px solid var(--line);
+}
+
+.story-hero {
+  --page-hero-image: url("images/site-hero-story-quiet-forest.png");
+  --page-hero-position: center 48%;
+}
+
+.guidance-hero {
+  --page-hero-image: url("images/site-hero-guidance-soft-dawn.png");
+  --page-hero-position: center 52%;
+}
+
+.path-hero {
+  --page-hero-image: url("images/site-hero-path-still-water.png");
+  --page-hero-position: center 44%;
+}
+
+.contact-hero {
+  --page-hero-image: url("images/site-hero-contact-stones.png");
+  --page-hero-position: center 48%;
+}
+
+.story-hero {
+  padding-bottom: clamp(44px, 6vw, 68px);
 }
 
 .page-hero-inner {
@@ -719,6 +771,25 @@ h3 {
 .contact-copy {
   display: grid;
   gap: 18px;
+}
+
+.story-page-refined {
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.54fr);
+  gap: clamp(34px, 5.5vw, 78px);
+  align-items: center;
+}
+
+.story-narrative {
+  padding-top: clamp(46px, 6.5vw, 78px);
+  padding-bottom: clamp(46px, 6.5vw, 78px);
+}
+
+.story-narrative .story-main {
+  gap: 18px;
+}
+
+.story-main h2 {
+  max-width: 760px;
 }
 
 .intro-copy p,
@@ -791,9 +862,39 @@ h3 {
   object-position: center;
 }
 
+.story-gallery {
+  gap: clamp(18px, 3vw, 28px);
+}
+
+.story-gallery .quote {
+  font-size: clamp(1.22rem, 2.3vw, 1.75rem);
+}
+
+.story-gallery img:first-of-type {
+  aspect-ratio: 4 / 4.45;
+}
+
+.story-gallery img:nth-of-type(2) {
+  aspect-ratio: 4 / 3;
+  object-position: center 55%;
+}
+
+.story-inline-photo {
+  margin: 10px 0 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.story-inline-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 46%;
+}
+
 .bio-placeholder {
-  margin-top: 10px;
-  padding: 24px;
+  padding: clamp(28px, 4vw, 42px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
@@ -806,6 +907,51 @@ h3 {
 
 .bio-placeholder p {
   margin-top: 12px;
+}
+
+.bio-section {
+  padding-top: clamp(46px, 6.5vw, 78px);
+  padding-bottom: clamp(46px, 6.5vw, 78px);
+}
+
+.bio-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.74fr);
+  align-items: center;
+  gap: clamp(30px, 5vw, 72px);
+}
+
+.bio-image-grid {
+  display: grid;
+  grid-template-columns: 0.82fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+
+.bio-image-grid img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+  object-fit: cover;
+}
+
+.bio-image-grid img:first-child {
+  grid-row: span 2;
+  aspect-ratio: 4 / 5.4;
+  object-position: center 42%;
+}
+
+.bio-image-grid img:nth-child(2),
+.bio-image-grid img:nth-child(3) {
+  aspect-ratio: 4 / 3;
+}
+
+.bio-image-grid img:nth-child(2) {
+  object-position: center 56%;
+}
+
+.bio-image-grid img:nth-child(3) {
+  object-position: center 45%;
 }
 
 .service-detail-list {
@@ -1002,6 +1148,7 @@ h3 {
   .template-c .story-copy,
   .intro-grid,
   .story-page,
+  .bio-feature,
   .contact-layout,
   .service-detail,
   .page-card-grid,
@@ -1059,6 +1206,12 @@ h3 {
     background:
       linear-gradient(180deg, rgba(255, 253, 247, 0.97), rgba(255, 253, 247, 0.9)),
       var(--hero-image) center / cover no-repeat;
+  }
+
+  .page-hero {
+    background:
+      linear-gradient(180deg, rgba(255, 253, 247, 0.98), rgba(255, 253, 247, 0.88)),
+      var(--page-hero-image) var(--page-hero-position) / cover no-repeat;
   }
 
   .hero-inner {
@@ -1156,6 +1309,28 @@ h3 {
   .cta-band {
     padding: 38px 20px;
   }
+
+  .story-gallery {
+    position: static;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .story-gallery .quote {
+    grid-column: auto;
+  }
+
+  .story-gallery img:first-of-type {
+    aspect-ratio: 4 / 3;
+  }
+
+  .bio-image-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .bio-image-grid img:first-child {
+    grid-row: auto;
+    aspect-ratio: 4 / 3;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1204,5 +1379,13 @@ h3 {
   .contact-form,
   .bio-placeholder {
     padding: 22px;
+  }
+
+  .story-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-image-grid {
+    grid-template-columns: 1fr;
   }
 }
