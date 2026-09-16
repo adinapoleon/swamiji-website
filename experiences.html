@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Path | Self-Knowledge</title>
+    <title>Experiences | Self-Knowledge</title>
     <link rel="stylesheet" href="styles.css?v=20260916b">
   </head>
   <body class="template-c">
@@ -26,8 +26,8 @@
             <a href="index.html">Home</a>
             <a href="about.html">Story</a>
             <a href="services.html">Guidance</a>
-            <a aria-current="page" href="approach.html">Path</a>
-            <a href="experiences.html">Experiences</a>
+            <a href="approach.html">Path</a>
+            <a aria-current="page" href="experiences.html">Experiences</a>
             <a href="contact.html">Contact</a>
           </nav>
         </div>
@@ -47,56 +47,43 @@
             <a href="index.html">Home</a>
             <a href="about.html">Story</a>
             <a href="services.html">Guidance</a>
-            <a aria-current="page" href="approach.html">Path</a>
-            <a href="experiences.html">Experiences</a>
+            <a href="approach.html">Path</a>
+            <a aria-current="page" href="experiences.html">Experiences</a>
             <a href="contact.html">Contact</a>
           </nav>
         </aside>
       </header>
 
       <main>
-        <section class="page-hero path-hero">
+        <section class="page-hero experiences-hero">
           <div class="container page-hero-inner">
-            <p class="eyebrow">The path</p>
-            <h1>Spiritual life becomes real when it touches daily life.</h1>
-            <p class="lead">The approach is inspired by Advaita Vedanta and made practical through listening, inquiry, meditation, and integration.</p>
+            <p class="eyebrow">Experiences</p>
+            <h1>Reflections on a shared journey.</h1>
+            <p class="lead">Personal reflections on inquiry, practice, and everyday life with Swamiji's guidance.</p>
           </div>
         </section>
 
         <section class="section">
-          <div class="container practice">
-            <div>
-              <p class="eyebrow">Approach</p>
-              <h2>A gentle structure for a very direct path.</h2>
-              <ul class="practice-list">
-                <li><span class="number">I</span><span><strong>Listening.</strong> Receive the wisdom passed down through the lineage of Vedanta teachers, and let their words find space in quiet reflection.</span></li>
-                <li><span class="number">II</span><span><strong>Inquiry.</strong> Explore your understanding of yourself with curiosity and care.</span></li>
-                <li><span class="number">III</span><span><strong>Meditation.</strong> Make time for stillness and attentive presence in everyday life.</span></li>
-                <li><span class="number">IV</span><span><strong>Integration.</strong> Bring understanding into everyday choices, relationships, and responsibilities.</span></li>
-              </ul>
-            </div>
-            <aside class="practice-panel">
-              <img src="images/swamiji-riverside-meditation.jpg" alt="Swamiji meditating beside a quiet river">
-              <h3>The tone is spacious, direct, and respectful.</h3>
-              <p>Thoughtful guidance supports sincere spiritual inquiry, steady practice, and reflection. Together, we explore conscious living through the teachings of Vedanta and your own lived experience.</p>
-            </aside>
-          </div>
-        </section>
-
-        <section class="section band">
-          <div class="container detail-grid">
-            <article>
-              <h3>Listen deeply</h3>
-              <p>Begin with the questions that matter to you in everyday life.</p>
-            </article>
-            <article>
-              <h3>Inquire honestly</h3>
-              <p>Draw on Advaita Vedanta to explore your assumptions and deepen self-understanding.</p>
-            </article>
-            <article>
-              <h3>Practice steadily</h3>
-              <p>Let meditation and reflection become a natural part of conscious daily living.</p>
-            </article>
+          <div class="container reflections">
+            <h2>Experiences and reflections</h2>
+            <p>Reflections will be shared here as they become available, with each contributor's permission.</p>
+            <!-- Add approved entries as list items using the template below.
+                 Use the contributor's chosen name or initials, their approved summary,
+                 and an optional longer reflection. Remove the empty-state paragraph
+                 and the list's hidden attribute when the first entry is published. -->
+            <ul class="experience-list" aria-label="Personal reflections" hidden></ul>
+            <template id="experience-entry">
+              <li class="experience-entry">
+                <article>
+                  <h3 class="experience-name"></h3>
+                  <p class="experience-summary"></p>
+                  <details>
+                    <summary>Read the full reflection</summary>
+                    <div class="experience-reflection"></div>
+                  </details>
+                </article>
+              </li>
+            </template>
           </div>
         </section>
       </main>

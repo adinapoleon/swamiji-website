@@ -711,7 +711,7 @@ main > .section:last-child {
 }
 
 .page-hero {
-  --page-hero-image: url("images/site-hero-home-still-water.png");
+  --page-hero-image: url("images/site-hero-yoga.jpg");
   --page-hero-position: center;
   padding: clamp(74px, 11vw, 138px) 0 clamp(54px, 8vw, 92px);
   background:
@@ -721,22 +721,22 @@ main > .section:last-child {
 }
 
 .story-hero {
-  --page-hero-image: url("images/site-hero-story-quiet-forest.png");
+  --page-hero-image: url("images/site-hero-yoga.jpg");
   --page-hero-position: center 48%;
 }
 
 .guidance-hero {
-  --page-hero-image: url("images/site-hero-guidance-soft-dawn.png");
+  --page-hero-image: url("images/site-hero-meditation.jpg");
   --page-hero-position: center 52%;
 }
 
 .path-hero {
-  --page-hero-image: url("images/site-hero-path-still-water.png");
+  --page-hero-image: url("images/site-hero-yoga.jpg");
   --page-hero-position: center 44%;
 }
 
 .contact-hero {
-  --page-hero-image: url("images/site-hero-contact-stones.png");
+  --page-hero-image: url("images/site-hero-meditation.jpg");
   --page-hero-position: center 48%;
 }
 
@@ -1389,3 +1389,20 @@ main > .section:last-child {
     grid-template-columns: 1fr;
   }
 }
+
+/* Quiet, editorial presentation for shared experiences. */
+.experiences-hero {
+  --page-hero-image: url("images/site-hero-yoga.jpg");
+  --page-hero-position: center 48%;
+}
+
+.reflections { max-width: 890px; }
+.reflections > p, .experience-entry p, .experience-reflection, .form-note {
+  color: var(--muted);
+}
+.experience-list { margin: 36px 0 0; padding: 0; list-style: none; }
+.experience-entry { padding: 32px 0; border-top: 1px solid var(--line); }
+.experience-entry summary { cursor: pointer; color: var(--deep-blue); }
+.experience-reflection { margin-top: 18px; }
+.form-note { margin: 0; font-size: 0.9rem; font-weight: 400; }
+.form-note a { color: var(--deep-blue); text-decoration: underline; overflow-wrap: anywhere; }
