@@ -76,7 +76,7 @@ if (menuToggle && drawer) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 821px)").matches) {
+    if (window.matchMedia("(min-width: 1081px)").matches) {
       closeDrawer();
     }
   });
