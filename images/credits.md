@@ -8,3 +8,5 @@ All backgrounds are stored locally. The following new photos are available under
 - Experiences: `site-hero-lake-reflections.jpg` — [Adem Percem, lake reflections](https://unsplash.com/photos/calm-lake-reflecting-green-hills-and-blue-sky-a-AaAXpw58g).
 
 Home retains `site-hero-yoga.jpg`; Guidance retains `site-hero-meditation.jpg`. Each page uses a distinct background.
+
+Path now uses `site-hero-quiet-shore.jpg` ([source image](https://images.unsplash.com/photo-1507525428034-b723cf961d3e)). The original Path content image is restored as `site-path-flowers.jpg` ([source image](https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83)). The garden meditation photo is retained as an unused asset.
