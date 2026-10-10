@@ -87,12 +87,12 @@ const testimonyCarousel = document.querySelector("[data-testimony-carousel]");
 if (testimonyCarousel) {
   const slides = Array.from(testimonyCarousel.querySelectorAll(".testimony-slide"));
   const controls = testimonyCarousel.querySelector(".testimony-controls");
-  const pauseButton = testimonyCarousel.querySelector("[data-testimony-pause]");
+  const dots = Array.from(testimonyCarousel.querySelectorAll("[data-testimony-index]"));
   const position = testimonyCarousel.querySelector(".testimony-position");
   const slideContainer = testimonyCarousel.querySelector(".testimony-slides");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let current = 0;
-  let paused = reducedMotion.matches;
+  let interacted = false;
   let hovered = false;
   let focused = false;
   let timer;
@@ -102,6 +102,11 @@ if (testimonyCarousel) {
     slides.forEach((slide, slideIndex) => {
       slide.hidden = slideIndex !== current;
     });
+    dots.forEach((dot, dotIndex) => {
+      if (dotIndex === current) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+    if (announce) interacted = true;
     // Automatic changes stay quiet for screen readers; manual changes are announced.
     position.setAttribute("aria-live", announce ? "polite" : "off");
     position.textContent = `${current + 1} of ${slides.length}`;
@@ -110,7 +115,7 @@ if (testimonyCarousel) {
 
   function scheduleRotation() {
     window.clearTimeout(timer);
-    const rotating = !paused && !hovered && !focused && !document.hidden;
+    const rotating = !reducedMotion.matches && !interacted && !hovered && !focused && !document.hidden;
     slideContainer.setAttribute("aria-live", rotating ? "off" : "polite");
     if (!rotating) return;
     // Give each full reflection time to be read, including the longer letters.
@@ -118,21 +123,14 @@ if (testimonyCarousel) {
     timer = window.setTimeout(() => showTestimony(current + 1), Math.max(15000, words * 350));
   }
 
-  function updatePauseButton() {
-    pauseButton.textContent = paused ? "Resume rotation" : "Pause rotation";
-  }
-
   testimonyCarousel.classList.add("is-enhanced");
   controls.hidden = false;
-  updatePauseButton();
   showTestimony(0);
 
   testimonyCarousel.querySelector("[data-testimony-prev]").addEventListener("click", () => showTestimony(current - 1, true));
   testimonyCarousel.querySelector("[data-testimony-next]").addEventListener("click", () => showTestimony(current + 1, true));
-  pauseButton.addEventListener("click", () => {
-    paused = !paused;
-    updatePauseButton();
-    scheduleRotation();
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => showTestimony(Number(dot.dataset.testimonyIndex), true));
   });
   testimonyCarousel.addEventListener("mouseenter", () => { hovered = true; scheduleRotation(); });
   testimonyCarousel.addEventListener("mouseleave", () => { hovered = false; scheduleRotation(); });
@@ -142,11 +140,5 @@ if (testimonyCarousel) {
     scheduleRotation();
   });
   document.addEventListener("visibilitychange", scheduleRotation);
-  reducedMotion.addEventListener("change", (event) => {
-    if (event.matches) {
-      paused = true;
-      updatePauseButton();
-      scheduleRotation();
-    }
-  });
+  reducedMotion.addEventListener("change", scheduleRotation);
 }

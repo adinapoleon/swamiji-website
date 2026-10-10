@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experiences | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css?v=20261010">
+    <link rel="stylesheet" href="styles.css?v=20261010b">
   </head>
   <body class="template-c">
     <div class="site-shell">
@@ -65,8 +65,7 @@
 
         <section class="section">
           <div class="container reflections">
-            <p class="eyebrow">Words from fellow seekers</p>
-            <h2 id="testimonies-heading">Experiences and reflections</h2>
+            <h2 class="testimony-heading" id="testimonies-heading">Words from fellow seekers</h2>
             <div class="testimony-carousel" role="region" aria-roledescription="carousel" aria-labelledby="testimonies-heading" data-testimony-carousel>
               <div class="testimony-slides" id="testimony-slides" aria-live="off">
                 <figure class="testimony-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
@@ -101,13 +100,17 @@
                 </figure>
               </div>
               <div class="testimony-controls" hidden>
-                <button type="button" class="testimony-control" data-testimony-pause aria-controls="testimony-slides">Pause rotation</button>
-                <div class="testimony-navigation">
-                  <button type="button" class="testimony-control" data-testimony-prev aria-label="Previous testimony" aria-controls="testimony-slides">&larr; Previous</button>
-                  <span class="testimony-position" aria-live="polite" aria-atomic="true">1 of 4</span>
-                  <button type="button" class="testimony-control" data-testimony-next aria-label="Next testimony" aria-controls="testimony-slides">Next &rarr;</button>
+                <button type="button" class="testimony-arrow" data-testimony-prev aria-label="Previous testimony" aria-controls="testimony-slides"><span aria-hidden="true">&larr;</span></button>
+                <div class="testimony-dots" aria-label="Choose a testimony">
+                  <button type="button" class="testimony-dot" data-testimony-index="0" aria-label="Read Rohit Punj's testimony" aria-current="true" aria-controls="testimony-slides"><span></span></button>
+                  <button type="button" class="testimony-dot" data-testimony-index="1" aria-label="Read Sachin Shah's testimony" aria-controls="testimony-slides"><span></span></button>
+                  <button type="button" class="testimony-dot" data-testimony-index="2" aria-label="Read Randal Bird's testimony" aria-controls="testimony-slides"><span></span></button>
+                  <button type="button" class="testimony-dot" data-testimony-index="3" aria-label="Read Amith M.'s testimony" aria-controls="testimony-slides"><span></span></button>
                 </div>
+                <button type="button" class="testimony-arrow" data-testimony-next aria-label="Next testimony" aria-controls="testimony-slides"><span aria-hidden="true">&rarr;</span></button>
+                <span class="testimony-position" aria-live="polite" aria-atomic="true">1 of 4</span>
               </div>
+            </div>
             </div>
           </div>
         </section>
@@ -120,6 +123,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js?v=20261010"></script>
+    <script src="script.js?v=20261010b"></script>
   </body>
 </html>
