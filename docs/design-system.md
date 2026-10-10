@@ -23,7 +23,7 @@ Story: hero → two narrative chapters beside the existing meditation portrait a
 
 Guidance: hero → three editorial guidance rows separated by rules → blue closing band.
 
-Journey: hero → numbered practice list beside the existing lily image and explanation → three consistent practice tiles → lake-image reflections introduction → existing four complete testimonials with manual carousel controls. The previous Experiences URL redirects to the reflections section on Journey.
+Journey: hero → numbered practice list beside the existing lily image and explanation → three consistent practice tiles → existing four complete testimonials with manual carousel controls. The previous Experiences URL redirects to the reflections section on Journey.
 
 Contact: hero → introductory text beside a spacious, consistently styled request form. Preserve the mailto destination and its explanatory note.
 
@@ -49,4 +49,4 @@ Browser capture limitation: Chrome's viewport-only screenshots with an emulated 
 
 ## Journey consolidation
 
-Path and Experiences are combined in approach.html under the navigation label Journey. Both original page introductions, all practice text, all four complete testimonials and all three photographs are retained. Experiences becomes a section heading rather than a second page title. Desktop and mobile navigation now have a single Journey link, and home links use the new page name. experiences.html forwards to approach.html#reflections, with a manual fallback link. Chrome checks at 1440, 768, 390 and 320px found one H1, four carousel slides, loaded images and no horizontal overflow. All testimonials and wraparound were exercised.
+Path and Experiences are combined in approach.html under the navigation label Journey. All practice text and all four complete testimonials are retained. At the user's request, the second photographic title section is removed, so the practice tiles flow directly into Words from fellow seekers. Desktop and mobile navigation have a single Journey link, and home links use the new page name. experiences.html forwards to approach.html#reflections, with a manual fallback link; the anchor now belongs to the testimonial section. The original lake photograph remains in the asset library. Chrome checks for the initial consolidation at 1440, 768, 390 and 320px found one H1, four carousel slides, loaded images and no horizontal overflow. All testimonials and wraparound were exercised.
