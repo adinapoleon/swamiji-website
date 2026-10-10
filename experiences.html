@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experiences | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css?v=20261010d">
+    <link rel="stylesheet" href="styles.css?v=20261010-redesign">
   </head>
-  <body class="template-c">
+  <body class="site-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
             <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
             <span class="brand-text">
               <span class="brand-name">Self-Knowledge</span>
@@ -23,18 +24,18 @@
             <span></span>
           </button>
           <nav class="nav-links" aria-label="Primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a href="approach.html?v=20260916d">Path</a>
-            <a aria-current="page" href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a aria-current="page" href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </div>
         <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
-        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+        <aside class="mobile-drawer" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
           <div class="drawer-header">
-            <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
               <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
               <span class="brand-text">
                 <span class="brand-name">Self-Knowledge</span>
@@ -44,22 +45,27 @@
             <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
           </div>
           <nav class="drawer-links" aria-label="Mobile primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a href="approach.html?v=20260916d">Path</a>
-            <a aria-current="page" href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a aria-current="page" href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </aside>
       </header>
 
-      <main>
+      <main id="main-content" tabindex="-1">
         <section class="page-hero experiences-hero">
-          <div class="container page-hero-inner">
-            <p class="eyebrow">Experiences</p>
+          <div class="container hero-frame">
+            <div class="hero-copy">
+              <p class="eyebrow">Experiences</p>
             <h1>Reflections on a shared journey.</h1>
             <p class="lead">Personal reflections on inquiry, practice, and everyday life with Swamiji's guidance.</p>
+            </div>
+            <figure class="hero-media">
+              <img src="images/site-hero-lake-reflections.jpg" alt="Green hills reflected in a still lake" width="1800" height="1570" fetchpriority="high" decoding="async">
+            </figure>
           </div>
         </section>
 
@@ -100,17 +106,16 @@
                 </figure>
               </div>
               <div class="testimony-controls" hidden>
-                <button type="button" class="testimony-arrow" data-testimony-prev aria-label="Previous testimony" aria-controls="testimony-slides"><span aria-hidden="true">&larr;</span></button>
+                <button type="button" class="testimony-arrow" data-testimony-prev aria-label="Previous testimony" aria-controls="testimony-slides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button>
                 <div class="testimony-dots" aria-label="Choose a testimony">
                   <button type="button" class="testimony-dot" data-testimony-index="0" aria-label="Read Rohit Punj's testimony" aria-current="true" aria-controls="testimony-slides"><span></span></button>
                   <button type="button" class="testimony-dot" data-testimony-index="1" aria-label="Read Sachin Shah's testimony" aria-controls="testimony-slides"><span></span></button>
                   <button type="button" class="testimony-dot" data-testimony-index="2" aria-label="Read Randal Bird's testimony" aria-controls="testimony-slides"><span></span></button>
                   <button type="button" class="testimony-dot" data-testimony-index="3" aria-label="Read Amith M.'s testimony" aria-controls="testimony-slides"><span></span></button>
                 </div>
-                <button type="button" class="testimony-arrow" data-testimony-next aria-label="Next testimony" aria-controls="testimony-slides"><span aria-hidden="true">&rarr;</span></button>
+                <button type="button" class="testimony-arrow" data-testimony-next aria-label="Next testimony" aria-controls="testimony-slides"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
                 <span class="testimony-position" aria-live="polite" aria-atomic="true">1 of 4</span>
               </div>
-            </div>
             </div>
           </div>
         </section>
@@ -123,6 +128,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js?v=20261010b"></script>
+    <script src="script.js?v=20261010-redesign"></script>
   </body>
 </html>

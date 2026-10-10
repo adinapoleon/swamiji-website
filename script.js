@@ -2,6 +2,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const drawer = document.querySelector(".mobile-drawer");
 const closeControls = document.querySelectorAll("[data-drawer-close]");
 const drawerLinks = document.querySelectorAll(".drawer-links a");
+const backgroundRegions = document.querySelectorAll(".nav-inner, main, .footer, .skip-link");
 
 function getDrawerFocusables() {
   return drawer
@@ -16,11 +17,10 @@ function openDrawer() {
   menuToggle.setAttribute("aria-expanded", "true");
   menuToggle.setAttribute("aria-label", "Close navigation menu");
   drawer.setAttribute("aria-hidden", "false");
+  drawer.inert = false;
+  backgroundRegions.forEach((region) => { region.inert = true; });
 
-  const focusables = getDrawerFocusables();
-  if (focusables.length) {
-    focusables[0].focus();
-  }
+  drawer.querySelector(".drawer-close").focus();
 }
 
 function closeDrawer() {
@@ -30,6 +30,11 @@ function closeDrawer() {
   menuToggle.setAttribute("aria-expanded", "false");
   menuToggle.setAttribute("aria-label", "Open navigation menu");
   drawer.setAttribute("aria-hidden", "true");
+  drawer.inert = true;
+  backgroundRegions.forEach((region) => { region.inert = false; });
+  if (menuToggle.getClientRects().length) {
+    menuToggle.focus();
+  }
 }
 
 if (menuToggle && drawer) {
@@ -76,8 +81,9 @@ if (menuToggle && drawer) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 1081px)").matches) {
+    if (window.matchMedia("(min-width: 1101px)").matches && document.body.classList.contains("nav-open")) {
       closeDrawer();
+      document.querySelector('.nav-links [aria-current="page"]').focus();
     }
   });
 }
@@ -90,12 +96,7 @@ if (testimonyCarousel) {
   const dots = Array.from(testimonyCarousel.querySelectorAll("[data-testimony-index]"));
   const position = testimonyCarousel.querySelector(".testimony-position");
   const slideContainer = testimonyCarousel.querySelector(".testimony-slides");
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   let current = 0;
-  let interacted = false;
-  let hovered = false;
-  let focused = false;
-  let timer;
 
   function showTestimony(index, announce = false) {
     current = (index + slides.length) % slides.length;
@@ -106,21 +107,10 @@ if (testimonyCarousel) {
       if (dotIndex === current) dot.setAttribute("aria-current", "true");
       else dot.removeAttribute("aria-current");
     });
-    if (announce) interacted = true;
-    // Automatic changes stay quiet for screen readers; manual changes are announced.
+    // Reflections change only on request, so long passages never move while being read.
     position.setAttribute("aria-live", announce ? "polite" : "off");
     position.textContent = `${current + 1} of ${slides.length}`;
-    scheduleRotation();
-  }
-
-  function scheduleRotation() {
-    window.clearTimeout(timer);
-    const rotating = !reducedMotion.matches && !interacted && !hovered && !focused && !document.hidden;
-    slideContainer.setAttribute("aria-live", rotating ? "off" : "polite");
-    if (!rotating) return;
-    // Give each full reflection time to be read, including the longer letters.
-    const words = slides[current].querySelector("blockquote").textContent.trim().split(/\s+/).length;
-    timer = window.setTimeout(() => showTestimony(current + 1), Math.max(15000, words * 350));
+    slideContainer.setAttribute("aria-live", announce ? "polite" : "off");
   }
 
   testimonyCarousel.classList.add("is-enhanced");
@@ -132,13 +122,4 @@ if (testimonyCarousel) {
   dots.forEach((dot) => {
     dot.addEventListener("click", () => showTestimony(Number(dot.dataset.testimonyIndex), true));
   });
-  testimonyCarousel.addEventListener("mouseenter", () => { hovered = true; scheduleRotation(); });
-  testimonyCarousel.addEventListener("mouseleave", () => { hovered = false; scheduleRotation(); });
-  testimonyCarousel.addEventListener("focusin", () => { focused = true; scheduleRotation(); });
-  testimonyCarousel.addEventListener("focusout", (event) => {
-    focused = testimonyCarousel.contains(event.relatedTarget);
-    scheduleRotation();
-  });
-  document.addEventListener("visibilitychange", scheduleRotation);
-  reducedMotion.addEventListener("change", scheduleRotation);
 }

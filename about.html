@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Story | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css?v=20260916d">
+    <link rel="stylesheet" href="styles.css?v=20261010-redesign">
   </head>
-  <body class="template-c">
+  <body class="site-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
             <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
             <span class="brand-text">
               <span class="brand-name">Self-Knowledge</span>
@@ -23,18 +24,18 @@
             <span></span>
           </button>
           <nav class="nav-links" aria-label="Primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a aria-current="page" href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a href="approach.html?v=20260916d">Path</a>
-            <a href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a aria-current="page" href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </div>
         <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
-        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+        <aside class="mobile-drawer" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
           <div class="drawer-header">
-            <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
               <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
               <span class="brand-text">
                 <span class="brand-name">Self-Knowledge</span>
@@ -44,39 +45,48 @@
             <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
           </div>
           <nav class="drawer-links" aria-label="Mobile primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a aria-current="page" href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a href="approach.html?v=20260916d">Path</a>
-            <a href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a aria-current="page" href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a href="approach.html">Path</a>
+            <a href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </aside>
       </header>
 
-      <main>
+      <main id="main-content" tabindex="-1">
         <section class="page-hero story-hero">
-          <div class="container page-hero-inner">
-            <p class="eyebrow">The story</p>
+          <div class="container hero-frame">
+            <div class="hero-copy">
+              <p class="eyebrow">The story</p>
             <h1>From practice to personal guidance.</h1>
             <p class="lead">The story behind the guidance: a life of study, contemplative practice, and service, shared with sincere seekers.</p>
+            </div>
+            <figure class="hero-media">
+              <img src="images/site-hero-forest-path.jpg" alt="A quiet path through a misty forest" width="1800" height="2700" fetchpriority="high" decoding="async">
+            </figure>
           </div>
         </section>
 
         <section class="section story-narrative">
           <div class="container story-page story-page-refined">
             <article class="story-main">
+              <div class="story-chapter">
               <p class="eyebrow">The path inward</p>
               <h2>A life shaped by inquiry, discipline, and service.</h2>
               <p>The movement toward monastic life began with a deep longing for truth. That longing became a call toward renunciation, discipline, scripture, meditation, and service.</p>
               <p>In the early years, practice brought structure. It asked for humility, patience, and the willingness to see how much of suffering comes from mistaken identity. Over time, silence became a place for reflection and steadiness.</p>
+              </div>
+              <div class="story-chapter">
               <h2>Teaching that became lived clarity.</h2>
               <p>Through 27 years of Advaita Vedanta practice, study and inquiry became a way to explore the nature of the self and bring understanding into everyday life.</p>
               <p>Now the intention is to help sincere seekers meet their own questions with honesty, tenderness, and precision. Spiritual inquiry can become a sincere, conscious way of living.</p>
+            </div>
             </article>
             <aside class="story-aside story-gallery">
+              <img src="images/swamiji-mountain-lake-meditation.jpg" alt="Swamiji seated in meditation by a mountain lake" width="2880" height="2160" loading="lazy" decoding="async">
               <p class="quote">A path of inquiry into who we are and how we live.</p>
-              <img src="images/swamiji-mountain-lake-meditation.jpg" alt="Swamiji seated in meditation by a mountain lake">
             </aside>
           </div>
         </section>
@@ -91,9 +101,9 @@
               <p>Bringing together 27 years of monastic life and spiritual practice with 10 years of engineering discipline, Swamiji brings together compassion, clarity, and precision. His guidance invites reflection on life's challenges through self-knowledge and lived experience.</p>
             </div>
             <div class="bio-image-grid" aria-label="Swamiji photos">
-              <img src="images/swamiji-tree-portrait.jpg" alt="Swamiji smiling among trees">
-              <img src="images/swamiji-riverside-meditation.jpg" alt="Swamiji meditating beside a quiet river">
-              <img src="images/swamiji-lakeside-profile.jpg" alt="Swamiji seated beside a mountain lake">
+              <img src="images/swamiji-tree-portrait.jpg" alt="Swamiji smiling among trees" width="2160" height="2880" loading="lazy" decoding="async">
+              <img src="images/swamiji-riverside-meditation.jpg" alt="Swamiji meditating beside a quiet river" width="2880" height="2160" loading="lazy" decoding="async">
+              <img src="images/swamiji-lakeside-profile.jpg" alt="Swamiji seated beside a mountain lake" width="2160" height="2880" loading="lazy" decoding="async">
             </div>
           </div>
         </section>
@@ -107,6 +117,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js?v=20260916"></script>
+    <script src="script.js?v=20261010-redesign"></script>
   </body>
 </html>

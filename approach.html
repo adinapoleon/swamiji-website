@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Path | Self-Knowledge</title>
-    <link rel="stylesheet" href="styles.css?v=20260916d">
+    <link rel="stylesheet" href="styles.css?v=20261010-redesign">
   </head>
-  <body class="template-c">
+  <body class="site-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-shell">
       <header class="nav">
         <div class="container nav-inner">
-          <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+          <a class="brand" href="index.html" aria-label="Self-Knowledge home">
             <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
             <span class="brand-text">
               <span class="brand-name">Self-Knowledge</span>
@@ -23,18 +24,18 @@
             <span></span>
           </button>
           <nav class="nav-links" aria-label="Primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a aria-current="page" href="approach.html?v=20260916d">Path</a>
-            <a href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a aria-current="page" href="approach.html">Path</a>
+            <a href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </div>
         <button class="drawer-backdrop" type="button" data-drawer-close tabindex="-1" aria-label="Close navigation menu"></button>
-        <aside class="mobile-drawer" id="mobile-navigation" aria-label="Mobile navigation" aria-hidden="true">
+        <aside class="mobile-drawer" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
           <div class="drawer-header">
-            <a class="brand" href="index.html?v=20260916d" aria-label="Self-Knowledge home">
+            <a class="brand" href="index.html" aria-label="Self-Knowledge home">
               <img class="brand-emblem" src="images/site-sharada-vidya-emblem.jpg" alt="Sharada Vidya Education Foundation emblem">
               <span class="brand-text">
                 <span class="brand-name">Self-Knowledge</span>
@@ -44,22 +45,27 @@
             <button class="drawer-close" type="button" data-drawer-close aria-label="Close navigation menu">Close</button>
           </div>
           <nav class="drawer-links" aria-label="Mobile primary navigation">
-            <a href="index.html?v=20260916d">Home</a>
-            <a href="about.html?v=20260916d">Story</a>
-            <a href="services.html?v=20260916d">Guidance</a>
-            <a aria-current="page" href="approach.html?v=20260916d">Path</a>
-            <a href="experiences.html?v=20260916d">Experiences</a>
-            <a class="nav-cta" href="contact.html?v=20260916d">Request Spiritual Coaching</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">Story</a>
+            <a href="services.html">Guidance</a>
+            <a aria-current="page" href="approach.html">Path</a>
+            <a href="experiences.html">Experiences</a>
+            <a class="nav-cta" href="contact.html">Request Spiritual Coaching</a>
           </nav>
         </aside>
       </header>
 
-      <main>
+      <main id="main-content" tabindex="-1">
         <section class="page-hero path-hero">
-          <div class="container page-hero-inner">
-            <p class="eyebrow">The path</p>
+          <div class="container hero-frame">
+            <div class="hero-copy">
+              <p class="eyebrow">The path</p>
             <h1>Spiritual life becomes real when it touches daily life.</h1>
             <p class="lead">The approach is inspired by Advaita Vedanta and made practical through listening, inquiry, meditation, and integration.</p>
+            </div>
+            <figure class="hero-media">
+              <img src="images/site-hero-quiet-shore.jpg" alt="A peaceful shoreline beside clear water" width="1800" height="1197" fetchpriority="high" decoding="async">
+            </figure>
           </div>
         </section>
 
@@ -76,7 +82,7 @@
               </ul>
             </div>
             <aside class="practice-panel">
-              <img src="images/site-path-flowers.jpg" alt="A pale water lily resting on still water">
+              <img src="images/site-path-flowers.jpg" alt="A pale water lily resting on still water" width="1000" height="650" loading="lazy" decoding="async">
               <h3>The tone is spacious, direct, and respectful.</h3>
               <p>Thoughtful guidance supports sincere spiritual inquiry, steady practice, and reflection. Together, we explore conscious living through the teachings of Vedanta and your own lived experience.</p>
             </aside>
@@ -108,6 +114,6 @@
         </div>
       </footer>
     </div>
-    <script src="script.js?v=20260916"></script>
+    <script src="script.js?v=20261010-redesign"></script>
   </body>
 </html>
