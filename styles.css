@@ -1416,3 +1416,42 @@ main > .section:last-child {
 }
 .nav-links .nav-cta:hover { background: #884a12; color: #fffaf1; }
 .drawer-links .nav-cta { color: #fffaf1; background: #a65b16; text-align: center; }
+
+/* Full-length testimonies, enhanced into a carousel when JavaScript is available. */
+.testimony-carousel {
+  margin-top: 32px;
+  padding: clamp(24px, 5vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--soft-shadow);
+}
+.testimony-slide { margin: 0; }
+.testimony-slide + .testimony-slide { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+.testimony-carousel.is-enhanced .testimony-slide { margin: 0; padding: 0; border: 0; }
+.testimony-slide[hidden], .testimony-controls[hidden] { display: none; }
+.testimony-slide blockquote { margin: 0; }
+.testimony-slide blockquote::before {
+  content: "\201C";
+  display: block;
+  height: 48px;
+  color: var(--accent);
+  font-family: Georgia, serif;
+  font-size: 80px;
+  line-height: 1;
+}
+.testimony-slide blockquote p { margin: 20px 0 0; font-size: clamp(1rem, 1.5vw, 1.125rem); line-height: 1.85; }
+.testimony-slide figcaption { margin-top: 28px; padding-left: 18px; border-left: 3px solid var(--accent); }
+.testimony-name { display: block; color: var(--deep-blue); font-weight: 700; }
+.testimony-detail { display: block; margin-top: 3px; color: var(--muted); font-size: 0.9rem; }
+.testimony-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.testimony-navigation { display: flex; align-items: center; gap: 12px; }
+.testimony-control { min-height: 44px; padding: 10px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--deep-blue); font: inherit; font-size: 0.9rem; cursor: pointer; }
+.testimony-control:hover { background: var(--wash); border-color: var(--deep-blue); }
+.testimony-control:focus-visible { outline: 3px solid var(--deep-blue); outline-offset: 3px; }
+.testimony-position { min-width: 42px; color: var(--muted); font-size: 0.85rem; text-align: center; }
+@media (max-width: 480px) {
+  .testimony-controls { justify-content: center; }
+  .testimony-navigation { width: 100%; justify-content: space-between; gap: 6px; }
+  .testimony-control { padding: 10px 12px; }
+}

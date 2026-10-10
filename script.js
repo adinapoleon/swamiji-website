@@ -81,3 +81,72 @@ if (menuToggle && drawer) {
     }
   });
 }
+
+const testimonyCarousel = document.querySelector("[data-testimony-carousel]");
+
+if (testimonyCarousel) {
+  const slides = Array.from(testimonyCarousel.querySelectorAll(".testimony-slide"));
+  const controls = testimonyCarousel.querySelector(".testimony-controls");
+  const pauseButton = testimonyCarousel.querySelector("[data-testimony-pause]");
+  const position = testimonyCarousel.querySelector(".testimony-position");
+  const slideContainer = testimonyCarousel.querySelector(".testimony-slides");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let current = 0;
+  let paused = reducedMotion.matches;
+  let hovered = false;
+  let focused = false;
+  let timer;
+
+  function showTestimony(index, announce = false) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.hidden = slideIndex !== current;
+    });
+    // Automatic changes stay quiet for screen readers; manual changes are announced.
+    position.setAttribute("aria-live", announce ? "polite" : "off");
+    position.textContent = `${current + 1} of ${slides.length}`;
+    scheduleRotation();
+  }
+
+  function scheduleRotation() {
+    window.clearTimeout(timer);
+    const rotating = !paused && !hovered && !focused && !document.hidden;
+    slideContainer.setAttribute("aria-live", rotating ? "off" : "polite");
+    if (!rotating) return;
+    // Give each full reflection time to be read, including the longer letters.
+    const words = slides[current].querySelector("blockquote").textContent.trim().split(/\s+/).length;
+    timer = window.setTimeout(() => showTestimony(current + 1), Math.max(15000, words * 350));
+  }
+
+  function updatePauseButton() {
+    pauseButton.textContent = paused ? "Resume rotation" : "Pause rotation";
+  }
+
+  testimonyCarousel.classList.add("is-enhanced");
+  controls.hidden = false;
+  updatePauseButton();
+  showTestimony(0);
+
+  testimonyCarousel.querySelector("[data-testimony-prev]").addEventListener("click", () => showTestimony(current - 1, true));
+  testimonyCarousel.querySelector("[data-testimony-next]").addEventListener("click", () => showTestimony(current + 1, true));
+  pauseButton.addEventListener("click", () => {
+    paused = !paused;
+    updatePauseButton();
+    scheduleRotation();
+  });
+  testimonyCarousel.addEventListener("mouseenter", () => { hovered = true; scheduleRotation(); });
+  testimonyCarousel.addEventListener("mouseleave", () => { hovered = false; scheduleRotation(); });
+  testimonyCarousel.addEventListener("focusin", () => { focused = true; scheduleRotation(); });
+  testimonyCarousel.addEventListener("focusout", (event) => {
+    focused = testimonyCarousel.contains(event.relatedTarget);
+    scheduleRotation();
+  });
+  document.addEventListener("visibilitychange", scheduleRotation);
+  reducedMotion.addEventListener("change", (event) => {
+    if (event.matches) {
+      paused = true;
+      updatePauseButton();
+      scheduleRotation();
+    }
+  });
+}
