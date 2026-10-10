@@ -2,7 +2,7 @@
 
 ## Purpose and constraints
 
-Create a serene, cohesive six-page spiritual coaching website. Preserve every existing text passage, link destination, photograph and the original Sharada Vidya emblem. The emblem file and its presentation are authoritative; the generated concept's placeholder logo must never be implemented. Keep the existing cream, saffron, marigold, charcoal and blue palette. No framework, external fonts, new image assets, or dependencies are needed.
+Create a serene, cohesive spiritual coaching website. Preserve every existing text passage, link destination, photograph and the original Sharada Vidya emblem. The emblem file and its presentation are authoritative; the generated concept's placeholder logo must never be implemented. Keep the existing cream, saffron, marigold, charcoal and blue palette. No framework, external fonts, new image assets, or dependencies are needed.
 
 ## Shared design
 
@@ -23,9 +23,7 @@ Story: hero → two narrative chapters beside the existing meditation portrait a
 
 Guidance: hero → three editorial guidance rows separated by rules → blue closing band.
 
-Path: hero → numbered practice list beside the existing lily image and explanation → three consistent practice tiles.
-
-Experiences: hero → reading-width reflections with existing four complete testimonials and manual carousel controls.
+Journey: hero → numbered practice list beside the existing lily image and explanation → three consistent practice tiles → lake-image reflections introduction → existing four complete testimonials with manual carousel controls. The previous Experiences URL redirects to the reflections section on Journey.
 
 Contact: hero → introductory text beside a spacious, consistently styled request form. Preserve the mailto destination and its explanatory note.
 
@@ -47,3 +45,8 @@ The initial visual comparison covered heading personality and hierarchy, the cre
 Following user feedback, all six title sections now use the existing photographs as backgrounds. This removes the repeated right-hand images at the start of Story and makes the title/body transition distinct. Chrome checks at 1440, 768, 390 and 320px confirmed that all six backgrounds load and cover their sections, all title copy fits, and no page overflows horizontally. No relevant console warnings or errors were recorded. Desktop and mobile Story captures were visually reviewed. The logo, photographs and content are unchanged.
 
 Browser capture limitation: Chrome's viewport-only screenshots with an emulated small viewport include extra blank space. Full-page emulated captures were used for responsive visual review, and a normal-size desktop screenshot was used for the handoff. The viewport overrides were reset afterwards.
+
+
+## Journey consolidation
+
+Path and Experiences are combined in approach.html under the navigation label Journey. Both original page introductions, all practice text, all four complete testimonials and all three photographs are retained. Experiences becomes a section heading rather than a second page title. Desktop and mobile navigation now have a single Journey link, and home links use the new page name. experiences.html forwards to approach.html#reflections, with a manual fallback link. Chrome checks at 1440, 768, 390 and 320px found one H1, four carousel slides, loaded images and no horizontal overflow. All testimonials and wraparound were exercised.

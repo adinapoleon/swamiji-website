@@ -97,6 +97,8 @@ p { margin: 0; }
 :is(.hero, .page-hero) :focus-visible { outline-color: var(--marigold); }
 .hero-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255, 253, 247, .3); color: var(--accent-soft); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.15rem, 1.6vw, 1.4rem); font-style: italic; line-height: 1.5; }
 .hero-note span { background: none; }
+.journey-reflections .hero-frame { min-height: 320px; }
+.journey-reflections h2 { font-size: clamp(2.25rem, 3.5vw, 3rem); text-wrap: balance; }
 
 /* Shared section rhythm, open editorial layouts and readable copy. */
 .section { padding-block: var(--section-space); }
